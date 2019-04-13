@@ -21,8 +21,8 @@ public class hw1 {
     static boolean processInput() throws Exception {
 	System.out.print("Please enter the semester: ");
 	Scanner sc = new Scanner(System.in);
-	String sem = sc.next();
-	sem = sem + sc.next();
+	String sem = sc.nextLine();
+	//sem = sem + sc.next();
 	FileWriter writer = new FileWriter(sem + ".txt");
 	writer.write(sem + " Semester\n\n");
 	boolean rep = true;
@@ -33,7 +33,7 @@ public class hw1 {
 	int n = 0;
 	while (rep == true) {
 		System.out.print("Please enter the course name: ");
-		String name = sc.next();
+		String name = sc.nextLine();
 		writer.write("Course: " + name + "\n");
 		System.out.print("Please enter the course's credit number: ");
 		cred = sc.nextInt();
